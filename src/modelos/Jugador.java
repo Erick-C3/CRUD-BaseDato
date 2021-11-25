@@ -21,6 +21,10 @@ public class Jugador {
         this.empates = empates;
     }
 
+    public Jugador(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String comoTeLlamas() {
        return nombre;
     }

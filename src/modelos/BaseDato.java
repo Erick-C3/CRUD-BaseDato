@@ -71,10 +71,7 @@ public class BaseDato {
         return conexionBaseDato;
     }
     
-    public void desconectarDB(){
-        //los pasos para desconectar correctamente la Base de dato
-        System.out.println("Base de dato desconectada");
-    }
+    
 
     
     /**
@@ -95,6 +92,36 @@ public class BaseDato {
                 System.out.println("Fallo al cerrar la conexionBD");
             }
         }
-        System.out.println("Desconecto la base de dato luego de insertar");
+        System.out.println("Desconecto la base de dato luego de insertar, actualizar o eliminar");
+    }
+    
+    
+    /**
+     * Descoencta la base de dato completamente una vez  terminado el uso de la conexion
+     * @param conexionBD es la conexion obtenida a la base de dato
+     * @param comandoPreparado es el comando usado durante la conexion a la base de dato actual
+     * @param resultadoComando es el resultado de la ejecucion del comando durante la conexion actual
+     */
+    public void desconectarDB(Connection conexionBD, PreparedStatement comandoPreparado, ResultSet resultadoComando) {
+        try {
+            resultadoComando.close();
+        } catch (SQLException ex) {
+            System.out.println("Falla al cerrar el resultado de comando " + ex);
+        } catch ( NullPointerException exPuntero){
+            System.out.println("Error el objeto resultadoComando no  tiene referencia o sea esta vacio");
+        } finally {
+            try {
+                comandoPreparado.close();
+            } catch (SQLException ex) {
+                System.out.println("Falla al cerrar el comando preparado " + ex);
+            } finally {
+                try {
+                    conexionBD.close();
+                } catch (SQLException ex) {
+                    System.out.println("Falla al cerrar la conexion a la base de dato " + ex);
+                }
+            }
+        }
+        System.out.println("Desconecto base de dato luego de obtener");
     }
 }

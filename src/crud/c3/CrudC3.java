@@ -28,7 +28,21 @@ public class CrudC3 {
         
         JugadorDAO controladorJugador = new JugadorDAO();
         
-        controladorJugador.insertarJugador(new Jugador("Erick", 1,3,2));
+        //controladorJugador.insertarJugador(new Jugador("bob", 1,1,1));//agrega un nuevo jugador a tabla
+        /*Jugador jugadorEncontrado = controladorJugador.obtenerJugador("Claudio");
+        System.out.println(jugadorEncontrado.comoTeLlamas());
+        System.out.println(jugadorEncontrado.cuantasCopasTenes());// 1
+        System.out.println(jugadorEncontrado.cuantasDerrotasTenes());// 3
+        System.out.println(jugadorEncontrado.cuantosEmpatesTenes());// 2*/
+        
+        //controladorJugador.actualizarJugador(new Jugador("Katsuo", 4,2,5), "Erick");
+        
+        /*Jugador jugadorEncontrado = controladorJugador.obtenerJugador("bob");
+        System.out.println(jugadorEncontrado.comoTeLlamas());
+        System.out.println(jugadorEncontrado.cuantasCopasTenes());// 1
+        System.out.println(jugadorEncontrado.cuantasDerrotasTenes());// 3
+        System.out.println(jugadorEncontrado.cuantosEmpatesTenes());// 2*/
+        controladorJugador.darBajaJugador(new Jugador("Katsuo"));
     }
     
 }
