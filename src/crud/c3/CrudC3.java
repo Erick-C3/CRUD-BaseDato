@@ -26,7 +26,7 @@ public class CrudC3 {
      */
     public static void main(String[] args) {
         
-        JugadorDAO controladorJugador = new JugadorDAO();
+        //JugadorDAO controladorJugador = new JugadorDAO();
         
         //controladorJugador.insertarJugador(new Jugador("bob", 1,1,1));//agrega un nuevo jugador a tabla
         /*Jugador jugadorEncontrado = controladorJugador.obtenerJugador("Claudio");
@@ -42,7 +42,7 @@ public class CrudC3 {
         System.out.println(jugadorEncontrado.cuantasCopasTenes());// 1
         System.out.println(jugadorEncontrado.cuantasDerrotasTenes());// 3
         System.out.println(jugadorEncontrado.cuantosEmpatesTenes());// 2*/
-        controladorJugador.darBajaJugador(new Jugador("Katsuo"));
+        //controladorJugador.darBajaJugador(new Jugador("Katsuo"));
     }
     
 }
