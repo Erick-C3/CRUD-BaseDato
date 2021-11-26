@@ -17,6 +17,10 @@ public class Aplicacion extends javax.swing.JFrame {
     
     private JugadorDAO controladorJugador;
     
+    
+    private static final String[] SIN_VECTOR_PARA_VENTANA = null;
+    private static final String VALOR_INICIAL_RECIBIR_VENTANA = "";
+    
     private static final String MENSAJE_VENTANA_INGRESAR = "Ingreso exitoso!";
     private static final String TITULO_VENTANA_INGRESAR = "Confirmacion de ingreso";
     private static final ImageIcon ICONO_INGRESAR = new ImageIcon("./src/imagenes/insertarIcono.png");
@@ -347,8 +351,6 @@ public class Aplicacion extends javax.swing.JFrame {
         return mostrarVentanaParaObtenerNombre(MENSAJE_VENTANA_ELIMINAR, TITULO_VENTANA_ELIMINAR, ICONO_ELIMINAR);
     }
 
-    private static final String[] SIN_VECTOR_PARA_VENTANA = null;
-    private static final String VALOR_INICIAL_RECIBIR_VENTANA = "";
     
     
     /**
